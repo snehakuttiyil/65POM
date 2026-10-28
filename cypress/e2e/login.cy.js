@@ -30,4 +30,11 @@ describe('OrangeHRM - Login Tests', () => {
     cy.get('.oxd-input-field-error-message')
       .should('be.visible');
   });
+  it('should validate empty username and valid password', () => {
+  loginPage.enterPassword('admin123');
+  loginPage.clickLogin();
+
+  cy.get('.oxd-input-field-error-message')
+    .should('be.visible');
+});
 });
