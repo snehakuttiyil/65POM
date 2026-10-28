@@ -3,4 +3,3 @@ cypress/videos/
 cypress/screenshots/
 cypress/reports/
 cypress/results/
-cypress.env.json
