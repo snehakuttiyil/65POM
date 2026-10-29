@@ -25,6 +25,13 @@ describe('OrangeHRM - Login Tests', () => {
       .should('be.visible');
   });
   it('should validate empty password', () => {
+    loginPage.enterUsername('Admin');
+    loginPage.clickLogin();
+    cy.get('.oxd-input-field-error-message')
+      .should('be.visible');
+  });
+  it('should validate empty username and valid password', () => {
+  loginPage.enterPassword('admin123');
   loginPage.enterUsername('Admin');
   loginPage.clickLogin();
 
