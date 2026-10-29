@@ -7,6 +7,7 @@ describe('OrangeHRM - Employee Tests', () => {
   const dashboardPage = new DashboardPage();
   const employeePage = new EmployeePage();
 
+  
   beforeEach(() => {
     cy.visit('/web/index.php/auth/login');
     loginPage.login('Admin', 'admin123');
